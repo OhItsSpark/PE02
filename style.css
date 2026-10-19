@@ -1,6 +1,9 @@
 :root{
-  --bg: #f7f9fb;
-  --muted: #666;
+  --bg: #080808;
+  --muted: #777777;
+  --card: #171717;
+  --accent: #00ff00;
+  --text: #cccccc;
 }
 
 *{box-sizing:border-box}
@@ -158,7 +161,6 @@ main{
   font-size:1.15rem;
   color:#333;
 }
-
 /* Footer with contact information */
 footer{
   width: 100%;
@@ -196,6 +198,7 @@ footer p{
   line-height:1.6;
 }
 
+
 /* Footer pinned to bottom - thin and minimal */
 footer{
   width:100%;
@@ -230,3 +233,106 @@ footer p{
   margin:0;
   line-height:1.4;
 }
+
+/* Added my set of colors over here, inspired on Milw0rm theme */
+
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Courier New", monospace;
+}
+
+header, main, footer {
+    background: var(--card);
+    color: var(--text);
+    border-color: #333333;
+}
+
+header h1, .acordian > h2, footer h3 {
+    color: var(--accent);
+}
+
+.acordian-item {
+    background: #111111;
+    color: var(--text);
+    border: 1px solid #333333;
+}
+
+.acordian-item[open] {
+    border-color: var(--accent);
+}
+
+.acordian-item summary:hover {
+    color: var(--accent);
+}
+
+footer a {
+    color: var(--accent);
+}
+
+footer a:hover {
+    color: #66ff66;
+}
+
+/* Skills table */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+/* These are the table cells */
+.skills-table th,
+.skills-table td {
+    padding: 12px;
+    border: 1px solid #333333;
+    text-align: left;
+}
+/* Green Header */
+.skills-table th {
+    background: #003300;
+    color: var(--accent);
+}
+/* Alternating row colors */
+.skills-table tr:nth-child(even) {
+    background: #202020;
+}
+/* Hover effect */
+.skills-table tr {
+    transition: background 0.3s ease;
+}
+
+.skills-table tr:hover {
+    background: #003300;
+    color: #00ff00;
+}
+
+
+/* Gradient Testing */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #080808,
+        #102410,
+        #003300
+    );
+    background-attachment: fixed;
+}
+
+header, main, footer {
+    background: linear-gradient(
+        180deg,
+        #171717,
+        #101c10
+    );
+}
+
+.acordian-item {
+    background: linear-gradient(
+        90deg,
+        #111111,
+        #171717
+    );
+}
+
